@@ -22,8 +22,14 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           
-      - name: 🔨 Install Dependencies
-        run: |
-          npm install
-          git reset --hard        
-      - run: npm run devstart
+      #- name: 🔨 Install Dependencies
+      #  run: |
+      #    npm install
+      #    git reset --hard        
+      #- run: npm run devstart
+      - name: 📂 Sync folders and files to the server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
