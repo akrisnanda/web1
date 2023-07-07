@@ -30,6 +30,6 @@ jobs:
       - name: 📂 Sync folders and files to the server
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASS }}
+          server: "ftp.akrisnanda.com"
+          username: "testnode@akrisnanda.com"
+          password: "superboy"
