@@ -32,4 +32,4 @@ jobs:
         with:
           server: "ftp.akrisnanda.com"
           username: "testnode@akrisnanda.com"
-          password: "superboy"
+          password: "superboy123"
